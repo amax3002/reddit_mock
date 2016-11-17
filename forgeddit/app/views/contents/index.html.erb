@@ -1,2 +1,17 @@
-<h1>Contents#index</h1>
+<h1>Forgeddit</h1>
+<h2>An original concept</h2>
+
+<%= link_to "Add New Content to Forgeddit", new_content_path %>
+
+<% @contents.each do |content| %>
+  <h4>
+    <%= content.title %>
+  </h4>
+  <p>
+    <%= content.label_type %>
+    <%= content.description %>
+  </p>
+<% end %>
+
+<br>
 <p>Find me in app/views/contents/index.html.erb</p>

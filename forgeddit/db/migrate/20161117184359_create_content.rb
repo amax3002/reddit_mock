@@ -4,6 +4,8 @@ class CreateContent < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :type
       t.text :description
+
+      t.timestamps
     end
   end
 end

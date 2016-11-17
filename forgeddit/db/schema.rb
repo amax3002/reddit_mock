@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117185514) do
+ActiveRecord::Schema.define(version: 20161117193550) do
 
   create_table "contents", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "label_type"
     t.text   "description"
   end
 
