@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     session["message"] = "you signed up!"
     if @user.save
-      redirect_to contents_path
+      redirect_to new_session_path
     else
       render :new
     end

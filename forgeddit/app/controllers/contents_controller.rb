@@ -5,7 +5,7 @@ class ContentsController < ApplicationController
   end
 
   def new
-    @content = Content.new()
+    @content = Content.new(user_id: current_user.id)
   end
 
   def create
@@ -19,6 +19,6 @@ class ContentsController < ApplicationController
   end
 
   def content_params
-    params.require(:content).permit(:title, :label_type, :description)
+    params.require(:content).permit(:title, :label_type, :description, :user_id)
   end
 end
