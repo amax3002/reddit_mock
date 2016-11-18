@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
   belongs_to :user
-  belongs_to :comment
-  validates :title, presence: true
+  belongs_to :content
+  scope :reversed, -> { order 'created_at DESC' }
 end

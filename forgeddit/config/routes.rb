@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root "homepages#index"
 
   resources :contents do
+    resources :comments, only: [:new, :create, :index, :show]
     member do
-      resources :comments, only: [:new, :create, :index, :show]
     end
   end
   resources :users, only: [:new, :create]

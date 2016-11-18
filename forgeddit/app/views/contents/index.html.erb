@@ -12,6 +12,13 @@
     <%= content.description %>
     <%= content.user.full_name %>
   </p>
+  <p>
+     <%= content.comments.count %>
+    <%= link_to " Comments", content_comments_path(content.id) %>
+  </p>
+  <p>
+    <%= link_to "Add a Comment", new_content_comment_path(content.id) %>
+  </p>
 <% end %>
 
 <br>
