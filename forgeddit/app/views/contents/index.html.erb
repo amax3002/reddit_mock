@@ -5,7 +5,7 @@
 
 <% @contents.each do |content| %>
   <h4>
-    <%= content.title %>
+    <%= link_to content.title, content.label_type %>
   </h4>
   <p>
     <%= content.label_type %>
