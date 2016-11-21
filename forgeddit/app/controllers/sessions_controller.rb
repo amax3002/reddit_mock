@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
       redirect_to contents_path
     else
-      @message = "Go AWAY dingus!!!!!"
+      @message = "Go AWAY!"
       render :new
     end
   end
